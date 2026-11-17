@@ -1,0 +1,15 @@
+import random
+
+secret = random.randint(1, 100)
+attempts = 0
+
+while True:
+    guess = int(input("Угадай число от 1 до 100: "))
+    attempts += 1
+    if guess < secret:
+        print("Больше")
+    elif guess > secret:
+        print("Меньше")
+    else:
+        print(f"Угадал, блядь, за {attempts} попыток!")
+        break
